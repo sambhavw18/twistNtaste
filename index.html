@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twist N Taste</title>
+    <link rel="shortcut icon" href="./assets/img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+</head>
+<script>
+    // JavaScript to hide the loader once the page has loaded
+    window.addEventListener('load', () => {
+        const loadingOverlay = document.getElementById('loading');
+        const mainContent = document.getElementById('content');
+
+        // Hide the loading overlay and show the content
+        loadingOverlay.style.display = 'none';
+        mainContent.style.display = 'block';
+    });
+</script>
+
+<body>
+    <div id="loading" class="loading-overlay">
+        <div class="spinner"></div>
+        <h4>Loading Delecious Food...</h4>
+    </div>
+    <div id="content">
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="navbar-logo">Twist N Taste</div>
+            <ul class="navbar-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#service">Services</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+        </nav>
+
+        <!-- Image Slider -->
+        <div class="slider" id="home">
+            <div class="slide" style="background-image: url('./assets/img/bg1.jpg');">
+                <div class="overlay">
+                    <h2>Welcome To Twist N Taste</h2>
+                    <a href="#about" class="slider-button">Menu</a>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('./assets/img/bg2.jpg');">
+                <div class="overlay">
+                    <h2>Let's Order Something</h2>
+                    <a href="#" class="slider-button">Order Now</a>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('./assets/img/bg3.jpg');">
+                <div class="overlay">
+                    <h2>Get In Touch</h2>
+                    <a href="#" class="slider-button">Contact Us</a>
+                </div>
+            </div>
+        </div>
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Us</h2>
+                    <p>We're passionate about bringing you the best food experience, whether you're dining in or
+                        enjoying your meal at home.
+<br>
+                        At Twist_N_Taste, we believe food is more than just a meal—it's a moment to share, enjoy,
+                        and savor. Our journey began with a love for delicious flavors and a commitment to quality.
+                        That's why we use only fresh ingredients and recipes crafted with care to create dishes that
+                        delight your taste buds!
+                    <br>
+                    Thank you for choosing us as your go-to spot for amazing food. Let's make every bite unforgettable!</p>
+                </div>
+                <div class="about-image">
+                    <img src="./assets/img/special-dish-banner.jpg" alt="Team or Company Image">
+                </div>
+            </div>
+        </section>
+        <!-- Services section -->
+        <section id="service" class="service-content">
+            <h4>Offering</h4>
+            <h2>Our Best Services</h2>
+            <div class="service-card">
+                <div class="card1">
+                    <img class="card-img" src="./assets/img/food.png" alt="icons">
+                    <h3>Excellent Food</h3>
+                    <p>Welcome to Twist_N_Taste, where great food brings happiness. We share the best dishes made with
+                        fresh ingredients and lots of love. From tasty snacks to hearty meals, there's something for
+                        everyone. Explore our menu and discover food that's delicious, satisfying, and made just for
+                        you!</p>
+                </div>
+                <div class="card2">
+                    <img class="card-img extra" src="./assets/img/delivery.png" alt="icons">
+                    <h3>Delivery</h3>
+                    <p>Craving something delicious? We've got you covered!, we deliver your favorite fast food right to
+                        your door—hot, fresh, and fast. From juicy burgers and crispy fries to pizzas and more, our menu
+                        is packed with tasty options. Just order, relax, and let us bring the flavor to you!</p>
+                </div>
+                <div class="card3">
+                    <img class="card-img" src="./assets/img/delcious.png" alt="icons">
+                    <h3>Fast Food</h3>
+                    <p>Fast, fresh, and full of flavor! At Twist_N_Taste, we celebrate the joy of fast food with a menu
+                        packed with your all-time favorites. From crispy fries and juicy burgers to cheesy pizzas and
+                        zesty wraps, there’s something for everyone. Whether you’re on the go or enjoying a treat at
+                        home, our fast food is always a delicious choice!</p>
+                </div>
+            </div>
+        </section>
+        <!-- Menu Section -->
+        <section id="menu" class="products-section">
+            <div class="container">
+                <h2 class="section-title">Menu</h2>
+                <div class="card">
+                    <div class="cardin snacks">
+                        <h4>Snacks/Starters</h4>
+                        <ul class="list" id="snacklist">
+                            <li>French Fries</li>
+                            <li>Masala Fries</li>
+                            <li>Cheese Fries</li>
+                            <li>Peri Peri Fries</li>
+                            <li>Chili Potato</li>
+                            <li>Honey Chili Potato</li>
+                            <li>Manchurian (gravy/dry)</li>
+                            <li>Chilli Paneer (gravy/dry)</li>
+                            <li>Spring Roll</li>
+                            <li>Crispy Spring Roll</li>
+                            <li>Crispy Corn</li>
+                        </ul>
+                    </div>
+                        <div class="cardin pizza">
+                            <h4>Pizza</h4>
+                            <ul class="list" id="pizzalist">
+                                <li>Onion Pizza (small/medium)</li>
+                                <li>Capsicum Pizza (small/medium)</li>
+                                <li>Tomato Pizza (small/medium)</li>
+                                <li>Sweet Corn Pizza (small/medium)</li>
+                                <li>Margherita Pizza (small/medium)</li>
+                                <li>Farm House Pizza (small/medium)</li>
+                                <li>Tandoori Paneer Pizza (small/medium)</li>
+                            </ul>
+                        </div>
+                        <div class="cardin tea-coffee">
+                            <h4>Tea/Coffee</h4>
+                            <ul class="list" id="teacoffeelist">
+                                <li>Normal Tea</li>
+                                <li>Masala Tea</li>
+                                <li>Hot Coffee</li>
+                                <li>Cold Coffee</li>
+                                <li>Cold Coffee (with icecream)</li>
+                                <li>Chocolate Cold Coffee</li>
+                                <li>Cold Drink (250ml)</li>
+                            </ul>
+                        </div>
+                        <div class="cardin shakes">
+                            <h4>Shakes</h4>
+                            <ul class="list" id="shakelist">
+                                <li>Vanilla Shake</li>
+                                <li>Chocolate Shake</li>
+                                <li>Strawberry Shake</li>
+                                <li>ButterScotch Shake</li>
+                                <li>Oreo Shake</li>
+                                <li>Kitkat Shake</li>
+                            </ul>
+                        </div>
+                    <div class="cardin burgers">
+                        <h4>Burgers</h4>
+                        <ul class="list" id="burgerlist">
+                            <li>Allo Tikki Burger</li>
+                            <li>Classic Cheese Burger</li>
+                            <li>Paneer Burger</li>
+                            <li>Loaded Burger</li>
+                        </ul>
+                    </div>
+                    <div class="cardin sandwiches">
+                        <h4>Sandwiches</h4>
+                        <ul class="list" id="sandwichlist">
+                            <li>Veg Sandwich</li>
+                            <li>Veg Grilled Sandwich</li>
+                            <li>Paneer Tikka Sandwich</li>
+                            <li>Cheese Loaded Sandwich</li>
+                        </ul>
+                    </div>
+                    <div class="cardin maggie">
+                        <h4>Maggie</h4>
+                        <ul class="list" id="maggielist">
+                            <li>Plain Maggie</li>
+                            <li>Veg Maggie</li>
+                            <li>Tandori Maggie</li>
+                            <li>Cheese Maggie</li>
+                            <li>Baked Maggie</li>
+                        </ul>
+                    </div>
+                    <div class="cardin mojitos">
+                        <h4>Mojitos</h4>
+                        <ul class="list" id="mojitolist">
+                            <li>Mint Mojito</li>
+                            <li>Virgin Mojito</li>
+                            <li>Green Apple Mojito</li>
+                            <li>Blue Ice Mojito</li>
+                            <li>Beach House Mojito</li>
+                            <li>Pana Colato Mojito</li>
+                            <li>Sun Rise Mojito</li>
+                        </ul>
+                    </div>
+                    <div class="cardin pasta">
+                        <h4>Pasta</h4>
+                        <ul class="list" id="pastalist">
+                            <li>White Sauce Pasta</li>
+                            <li>Red Sauce Pasta</li>
+                            <li>Mix Sauce Pasta</li>
+                            <li>Tandoori Sauce Pasta</li>
+                            <li>Makhani Sauce Pasta</li>
+                        </ul>
+                    </div>
+                    <div class="cardin noodles">
+                        <h4>Noodles</h4>
+                        <ul class="list" id="noodleslist">
+                            <li>Veg Noodles</li>
+                            <li>Singapuri Noodles</li>
+                            <li>Chilli Garlic Noodles</li>
+                        </ul>
+                    </div>
+                    <div class="cardin momos">
+                        <h4>Momos</h4>
+                        <ul class="list" id="momoslist">
+                            <li>Veg Momos</li>
+                            <li>Paneer Momos</li>
+                            <li>Kurkure Momos</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2 class="section-title">Leave a message for us!</h2>
+                <form class="contact-form" id="emailform">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
+                    </div>
+                    <button type="button" onclick="handleSubmit()" class="submit-button">Submit</button>
+                </form>
+            </div>
+        </section>
+        <!-- Footer Section -->
+        <footer class="footer-section">
+            <div class="container">
+                <div class="footer-content">
+                    <!-- Social Media Links -->
+                    <div class="social-media">
+                        <h4>Let's Connect With Us</h4>
+                        <a href="https://www.instagram.com/twist_n_tastecafe/" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                    <!-- Copyright Info -->
+                    <p class="copyright">
+                    <p><span><i class="fa fa-phone"></i></span> +91 8307972886</p>
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="./assets/js/script.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script>
+    emailjs.init('tT3m3SHsDvT7P109-'); // Initialize EmailJS with your user ID
+
+    function handleSubmit() {
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        if (!name || !email || !message) {
+            alert("Please fill in all fields.");
+            return;
+        }
+
+        // Prepare data
+        const templateParams = {
+            user_name: name,
+            user_mail: email,
+            message: message,
+        };
+
+        // Send email using EmailJS
+        emailjs.send('service_zoh4x9y', 'template_veypclh', templateParams)
+            .then((response) => {
+                alert('Thank you for contacting us! A confirmation email has been sent.');
+                location.reload();
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                alert('Failed to send your message. Please try again.');
+            });
+        console.log(templateParams)
+    }
+</script>
+
+</html>
